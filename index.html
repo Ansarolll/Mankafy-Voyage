@@ -11,6 +11,12 @@
 <meta property="og:type" content="website" />
 <title>Mankafy Voyage — Agence de Voyage depuis Madagascar</title>
 
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
+<link rel="shortcut icon" href="./favicon.svg" />
+<link rel="shortcut icon" href="./favicon.png" />
+<link rel="apple-touch-icon" href="./favicon.svg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -993,6 +999,182 @@
   }
   .stars .icon { width: 14px; height: 14px; }
 
+  /* ─── FAQ ─── */
+  .faq {
+    background: var(--white);
+    text-align: center;
+    padding-top: var(--section-gap);
+  }
+  .faq-grid {
+    max-width: 920px;
+    margin: 3.5rem auto var(--section-gap);
+    display: grid;
+    gap: 1rem;
+    text-align: left;
+  }
+  .faq-item {
+    /* background: var(--cream); */
+    border: .5px solid rgba(10,22,40,0.08);
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(10,22,40,0.04);
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem;
+    font-weight: 600;
+    color: var(--deep);
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.12);
+    color: var(--gold-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .faq-item[open] summary::after {
+    content: '–';
+    background: rgba(201,168,76,0.2);
+  }
+  .faq-item p {
+    padding: 0 1.4rem 1.2rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.92rem;
+  }
+  .faq-note {
+    margin-top: 1.2rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+  }
+
+  /* ─── PRICING ─── */
+  .pricing {
+    background: var(--cream);
+    text-align: center;
+    padding-top: var(--section-gap);
+  }
+  .pricing-intro {
+    max-width: 720px;
+    margin: 1rem auto 0;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 3.5rem 0 0;
+  }
+  .pricing-card {
+    position: relative;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(10,22,40,0.08);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 18px 40px rgba(10,22,40,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .pricing-card.featured {
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,240,232,0.95));
+    border-color: rgba(201,168,76,0.35);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 55px rgba(10,22,40,0.1);
+  }
+  .pricing-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    background: rgba(201,168,76,0.12);
+    color: var(--gold-dark);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+  }
+  .pricing-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--deep);
+    line-height: 1.15;
+  }
+  .pricing-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+  }
+  .pricing-price small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 0.35rem;
+  }
+  .pricing-card p {
+    color: var(--text-light);
+    line-height: 1.75;
+    font-size: 0.92rem;
+  }
+  .pricing-list {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+  }
+  .pricing-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: var(--deep);
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+  .pricing-list li::before {
+    content: '✓';
+    color: var(--gold-dark);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .pricing-card .btn-primary {
+    margin-top: auto;
+    justify-content: center;
+    width: 100%;
+  }
+  .pricing-note {
+    margin-top: 1.2rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
   /* ─── CONTACT ─── */
   .contact {
     background: var(--deep);
@@ -1242,6 +1424,8 @@
     .transfer-img { min-height: 250px; }
     .transfer-text { padding: 4rem 1.5rem; }
     .testi-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card.featured { transform: none; }
     .contact { grid-template-columns: 1fr; }
     .contact-info { padding: 4rem 1.5rem; }
     .contact-form { padding: 4rem 1.5rem; }
@@ -1357,6 +1541,7 @@
     <li><a href="#destinations">Destinations</a></li>
     <li><a href="#pourquoi">Notre Différence</a></li>
     <li><a href="#transfert">Transfert</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#contact" class="nav-cta">Nous Contacter</a></li>
   </ul>
 
@@ -1365,6 +1550,7 @@
     <a href="#destinations">Destinations</a>
     <a href="#pourquoi">Notre Différence</a>
     <a href="#transfert">Transfert</a>
+    <a href="#tarifs">Tarifs</a>
     <a href="#contact" class="nav-cta-mobile">Nous Contacter</a>
   </div>
 </nav>
@@ -1395,7 +1581,7 @@
   </div>
   <div class="hero-stats">
     <div class="stat">
-      <div class="stat-num">10+</div>
+      <div class="stat-num">10</div>
       <div class="stat-label">Années d'expérience</div>
     </div>
     <div class="stat">
@@ -1403,7 +1589,7 @@
       <div class="stat-label">Bureaux à Madagascar</div>
     </div>
     <div class="stat">
-      <div class="stat-num">20+</div>
+      <div class="stat-num">20</div>
       <div class="stat-label">Destinations</div>
     </div>
   </div>
@@ -1812,6 +1998,81 @@
   </div>
 </section>
 
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="section-tag" style="justify-content:center">Questions fréquentes</div>
+  <h2 class="section-title">Tout ce qu'il faut savoir<br><em>avant de réserver</em></h2>
+  <div class="faq-grid">
+    <details class="faq-item">
+      <summary>Combien coûte un voyage avec Mankafy Voyage ?</summary>
+      <p>Le budget dépend de la destination, de la durée, du nombre de voyageurs et du niveau de confort souhaité. Nous préparons un devis sur mesure pour que vous puissiez comparer rapidement plusieurs options.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Faites-vous des voyages entièrement sur mesure ?</summary>
+      <p>Oui. Nous construisons des itinéraires personnalisés, du simple week-end au combo plus complet, en fonction de votre budget, de vos dates et de vos envies.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Combien de temps à l'avance faut-il réserver ?</summary>
+      <p>Idéalement, plusieurs semaines à l'avance pour avoir plus de choix sur les vols et les hébergements. Mais nous pouvons aussi gérer des demandes plus urgentes selon la disponibilité.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Proposez-vous aussi le transfert d'argent ?</summary>
+      <p>Oui. Nous proposons un service de transfert d'argent depuis Madagascar vers plusieurs destinations, notamment la France, la Chine, les Émirats, Maurice, le Japon et d'autres pays.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Quel est le moyen le plus rapide pour vous contacter ?</summary>
+      <p>Le plus rapide est WhatsApp. Vous pouvez nous envoyer votre demande directement depuis le bouton WhatsApp ou depuis le formulaire de contact en bas de page.</p>
+    </details>
+  </div>
+  <p class="faq-note">Vous avez un projet plus spécifique ? Contactez-nous directement, on vous répond avec une proposition claire et rapide.</p>
+</section>
+
+<!-- ─── PRICING ─── -->
+<section class="pricing" id="tarifs">
+  <div class="section-tag" style="justify-content:center">Tarifs indicatifs</div>
+  <h2 class="section-title">Des prix clairs<br><em>avant de demander un devis</em></h2>
+  <p class="pricing-intro">Ces tarifs sont indicatifs et varient selon la saison, la disponibilité, le niveau de confort et la personnalisation du voyage. Le devis final reste toujours gratuit et sur mesure.</p>
+  <div class="pricing-grid">
+    <article class="pricing-card">
+      <div class="pricing-badge">Circuit Madagascar</div>
+      <h3>Escapade locale</h3>
+      <div class="pricing-price">850 000 à 1 600 000 Ar <small>par personne</small></div>
+      <p>Idéal pour un circuit de 5 à 7 jours avec itinéraire personnalisé, hébergements sélectionnés et conseils locaux.</p>
+      <ul class="pricing-list">
+        <li>Itinéraire adapté à votre rythme</li>
+        <li>Hôtels et transferts conseillés</li>
+        <li>Suivi WhatsApp pendant la préparation</li>
+      </ul>
+      <a href="#contact" class="btn-primary pricing-cta" data-trip-type="Circuit Madagascar uniquement" data-destinations="Madagascar" data-default-people="2" data-default-days="14" data-message="Bonjour Mankafy Voyage, je souhaite un devis pour la formule Escapade locale (850 000 à 1 600 000 Ar par personne), sur une durée de 5 à 7 jours.">Demander ce tarif</a>
+    </article>
+    <article class="pricing-card featured">
+      <div class="pricing-badge">Le plus demandé</div>
+      <h3>Combo Mada + Dubaï</h3>
+      <div class="pricing-price">4 500 000 à 9 000 000 Ar <small>par personne</small></div>
+      <p>Une formule très demandée pour combiner Madagascar avec une grande destination internationale, selon les dates et la saison.</p>
+      <ul class="pricing-list">
+        <li>Billets et hébergements coordonnés</li>
+        <li>Combinaison de deux expériences en un voyage</li>
+        <li>Accompagnement jusqu’à la validation du dossier</li>
+      </ul>
+      <a href="#contact" class="btn-primary pricing-cta" data-trip-type="Combo Madagascar + Destination" data-destinations="Madagascar + Dubaï" data-default-people="2" data-default-days="21" data-message="Bonjour Mankafy Voyage, je souhaite un devis pour le combo Madagascar + Dubaï (4 500 000 à 9 000 000 Ar par personne). Merci de me proposer les meilleures options selon mes dates.">Obtenir un devis combo</a>
+    </article>
+    <article class="pricing-card">
+      <div class="pricing-badge">Voyage international</div>
+      <h3>Départ depuis Madagascar</h3>
+      <div class="pricing-price">2 900 000 à 6 500 000 Ar <small>par personne</small></div>
+      <p>Pour les voyages vers l’Asie, le Moyen-Orient ou d’autres destinations, avec assistance sur les étapes clés.</p>
+      <ul class="pricing-list">
+        <li>Recherche d’options adaptées</li>
+        <li>Conseils visas et itinéraires</li>
+        <li>Options selon budget et calendrier</li>
+      </ul>
+      <a href="#contact" class="btn-primary pricing-cta" data-trip-type="Voyage international depuis Madagascar" data-destinations="À préciser" data-default-people="1" data-default-days="21" data-message="Bonjour Mankafy Voyage, je souhaite un devis pour un voyage international depuis Madagascar (2 900 000 à 6 500 000 Ar par personne). Merci de me proposer plusieurs options selon mon budget.">Comparer les options</a>
+    </article>
+  </div>
+  <div class="pricing-note">Besoin d’un transfert d’argent ? Les frais sont calculés selon le montant et la destination. Contactez-nous pour une estimation rapide.</div>
+</section>
+
 <!-- ─── CONTACT ─── -->
 <section class="contact" id="contact">
   <div class="contact-info">
@@ -1908,6 +2169,7 @@
   <ul class="footer-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </footer>
@@ -1971,6 +2233,44 @@
         e.preventDefault();
         target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
       }
+    });
+  });
+
+  function prefillQuoteForm(trigger) {
+    if (!trigger) return;
+
+    const tripType = trigger.dataset.tripType || '';
+    const destinations = trigger.dataset.destinations || '';
+    const defaultPeople = trigger.dataset.defaultPeople || '';
+    const defaultDays = trigger.dataset.defaultDays || '';
+    const message = trigger.dataset.message || '';
+
+    const addDays = (days) => {
+      const date = new Date();
+      date.setDate(date.getDate() + Number(days));
+      return date.toISOString().slice(0, 10);
+    };
+
+    const tripTypeField = document.getElementById('tripType');
+    const destinationsField = document.getElementById('destinationsInput');
+    const messageField = document.getElementById('message');
+    const departureDateField = document.getElementById('departureDate');
+    const peopleCountField = document.getElementById('peopleCount');
+
+    if (tripTypeField && tripType) tripTypeField.value = tripType;
+    if (destinationsField && destinations) destinationsField.value = destinations;
+    if (departureDateField && defaultDays) departureDateField.value = addDays(defaultDays);
+    if (peopleCountField && defaultPeople) peopleCountField.value = defaultPeople;
+    if (messageField && message) messageField.value = message;
+
+    window.setTimeout(() => {
+      tripTypeField?.focus();
+    }, 300);
+  }
+
+  document.querySelectorAll('.pricing-cta').forEach(button => {
+    button.addEventListener('click', () => {
+      prefillQuoteForm(button);
     });
   });
 
