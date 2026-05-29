@@ -1402,13 +1402,28 @@
     :root { --page-x: 4rem; }
   }
 
+  @media (max-width: 1385px) {
+    nav {
+      padding: 0.95rem var(--page-x);
+    }
+    .nav-logo span:first-child {
+      font-size: 1.4rem;
+    }
+    .nav-logo span:last-child {
+      letter-spacing: 0.2em;
+    }
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav-mobile.open { display: block; }
+    .nav-mobile {
+      padding: 0.75rem var(--page-x) 1rem;
+    }
+  }
+
   @media (max-width: 900px) {
     :root { --nav-offset: 72px; }
     :root { --page-x: 1.5rem; --section-gap: 4rem; }
     nav { padding: 1rem var(--page-x); }
-    .nav-links { display: none; }
-    .nav-toggle { display: inline-flex; }
-    .nav-mobile.open { display: block; }
     .hero-content { padding: 0 var(--page-x); }
     .hero-stats { right: var(--page-x); bottom: 5rem; gap: 1.5rem; }
     .about { grid-template-columns: 1fr; }
@@ -2070,7 +2085,7 @@
       <a href="#contact" class="btn-primary pricing-cta" data-trip-type="Voyage international depuis Madagascar" data-destinations="À préciser" data-default-people="1" data-default-days="21" data-message="Bonjour Mankafy Voyage, je souhaite un devis pour un voyage international depuis Madagascar (2 900 000 à 6 500 000 Ar par personne). Merci de me proposer plusieurs options selon mon budget.">Comparer les options</a>
     </article>
   </div>
-  <div class="pricing-note">Besoin d’un transfert d’argent ? Les frais sont calculés selon le montant et la destination. Contactez-nous pour une estimation rapide.</div>
+  <div class="pricing-note">Besoin d’autres informations ? Contactez-nous pour une estimation rapide.</div>
 </section>
 
 <!-- ─── CONTACT ─── -->
