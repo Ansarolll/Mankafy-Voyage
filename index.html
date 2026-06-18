@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Agence de voyage basée à Madagascar : circuits sur mesure à Madagascar, voyages internationaux et transfert d'argent. Demandez un devis gratuit via WhatsApp." />
+<meta name="description" content="Agence de voyage basée à Madagascar : circuits sur mesure, voyages internationaux, location de voiture et transfert d'argent. Demandez un devis gratuit via WhatsApp." />
 <meta name="theme-color" content="#0A1628" />
 
 <meta property="og:title" content="Mankafy Voyage — Agence de Voyage depuis Madagascar" />
-<meta property="og:description" content="Circuits sur mesure à Madagascar, voyages internationaux et transfert d'argent. Devis gratuit via WhatsApp." />
+<meta property="og:description" content="Circuits sur mesure à Madagascar, voyages internationaux, location de voiture et transfert d'argent. Devis gratuit via WhatsApp." />
 <meta property="og:image" content="https://picsum.photos/seed/mankafy-hero/1800/1000" />
 <meta property="og:url" content="https://mankafy-voyage.vercel.app/" />
 <meta property="og:type" content="website" />
@@ -30,12 +30,12 @@
     --page-x: 10rem;
     --section-gap: 7rem;
     --gold: #C9A84C;
-    --gold-light: #E8C97A;
+    --gold-light: #faa401;
     --gold-dark: #8C6D1F;
     --deep: #0A1628;
     --deep2: #112240;
     --teal: #0E4D4D;
-    --teal-light: #1A7A6E;
+    --teal-light: #tyfaa401;
     --cream: #F5F0E8;
     --sand: #E8D8B8;
     --text: #2A2A2A;
@@ -278,7 +278,7 @@
     position: absolute;
     inset: 0;
     background-color: var(--deep2);
-    background-image: url('https://picsum.photos/seed/mankafy-hero/1800/1000');
+    background-image: url('pictures/home_hero_image.png');
     background-size: cover;
     background-position: center 30%;
     transform: scale(1.05);
@@ -450,17 +450,20 @@
   .services,
   .destinations,
   .why,
+  .car-rental,
   .testimonials {
     display: flow-root;
   }
 
   .services .section-tag,
   .why .section-tag,
+  .car-rental .section-tag,
   .testimonials .section-tag {
     margin-top: var(--section-gap);
   }
   .services .services-grid,
   .why .why-grid,
+  .car-rental .car-rental-grid,
   .testimonials .testi-grid {
     margin-bottom: var(--section-gap);
   }
@@ -502,13 +505,17 @@
     padding: 0;
   }
   .about-img {
+    border-top: 4px solid rgba(10,22,40,0.08);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.08);
     position: relative;
     min-height: 600px;
+    max-height: 800px;
     overflow: hidden;
   }
   .about-img img {
     width: 100%; height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: transform 0.6s;
   }
   .about-img:hover img { transform: scale(1.04); }
@@ -586,7 +593,7 @@
   .services { background: var(--cream); text-align: center; }
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin-top: 3.5rem;
   }
@@ -603,13 +610,14 @@
     box-shadow: 0 20px 50px rgba(10,22,40,0.12);
   }
   .service-card-img {
-    height: 200px;
+    height: 300px;
     overflow: hidden;
     position: relative;
   }
   .service-card-img img {
     width: 100%; height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.5s;
   }
   .service-card:hover .service-card-img img { transform: scale(1.08); }
@@ -622,7 +630,7 @@
   .service-card-icon .icon { width: 28px; height: 28px; }
   .service-card-body h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--deep);
     margin-bottom: 0.7rem;
@@ -788,7 +796,7 @@
     border: 6px solid var(--white);
     box-shadow: 0 15px 40px rgba(10,22,40,0.15);
   }
-  .why-img-accent img { width: 100%; height: 100%; object-fit: cover; }
+  .why-img-accent img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .why-img-quote {
     position: absolute;
     top: 45%;
@@ -838,6 +846,96 @@
     font-size: 0.88rem;
     color: var(--text-light);
     line-height: 1.7;
+  }
+
+  /* ─── CAR RENTAL ─── */
+  .car-rental {
+    background: var(--white);
+    text-align: center;
+  }
+  .car-rental-intro {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    max-width: 620px;
+    margin: 1rem auto 0;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+  .car-rental-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top: 3.5rem;
+  }
+  .car-card {
+    background: var(--cream);
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(10,22,40,0.06);
+  }
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(10,22,40,0.1);
+  }
+  .car-card-img {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+  }
+  .car-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .car-card:hover .car-card-img img { transform: scale(1.06); }
+  .car-card-body { padding: 1.4rem; }
+  .car-card-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--deep);
+    margin-bottom: 0.4rem;
+  }
+  .car-card-body p {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  .car-card-price {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.04em;
+  }
+  .car-rental-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin: 2.5rem 0 2rem;
+    padding: 0 var(--page-x);
+  }
+  .car-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .car-feature .icon {
+    width: 20px;
+    height: 20px;
+    color: var(--gold-dark);
+    flex-shrink: 0;
+  }
+  .car-rental-cta {
+    display: inline-flex;
+    margin-bottom: var(--section-gap);
   }
 
   /* ─── TRANSFER ─── */
@@ -905,7 +1003,7 @@
   .transfer-img img {
     width: 100%; height: 100%;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.3;
   }
   .transfer-img-overlay {
     position: absolute;
@@ -1403,6 +1501,7 @@
   /* ─── RESPONSIVE ─── */
   @media (max-width: 1200px) {
     :root { --page-x: 4rem; }
+    .car-rental-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 1385px) {
@@ -1438,6 +1537,7 @@
     .dest-card:nth-child(6) { grid-column: span 1; }
     .why-grid { grid-template-columns: 1fr; }
     .why-img-stack { height: 300px; }
+    .car-rental-grid { grid-template-columns: repeat(2, 1fr); }
     .transfer { grid-template-columns: 1fr; }
     .transfer-img { min-height: 250px; }
     .transfer-text { padding: 4rem 1.5rem; }
@@ -1466,6 +1566,7 @@
       animation: none !important;
     }
     .service-card,
+    .car-card,
     .dest-card,
     .testi-card,
     .why-point,
@@ -1540,6 +1641,16 @@
     <path class="icon-stroke" d="M10 11H6a4 4 0 0 0 0 8h1v-2H6a2 2 0 0 1 0-4h4V5H6v2h4z" />
     <path class="icon-stroke" d="M20 11h-4a4 4 0 0 0 0 8h1v-2h-1a2 2 0 0 1 0-4h4V5h-4v2h4z" />
   </symbol>
+  <symbol id="i-car" viewBox="0 0 24 24">
+    <path class="icon-stroke" d="M5 17h14" />
+    <path class="icon-stroke" d="M5 17a2 2 0 1 0-4 0" />
+    <path class="icon-stroke" d="M19 17a2 2 0 1 0 4 0" />
+    <path class="icon-stroke" d="M3 11l2-6h14l2 6" />
+    <path class="icon-stroke" d="M5 11h14v6H5z" />
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path class="icon-stroke" d="M20 6L9 17l-5-5" />
+  </symbol>
 </svg>
 
 <!-- ─── NAV ─── -->
@@ -1558,6 +1669,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#destinations">Destinations</a></li>
     <li><a href="#pourquoi">Notre Différence</a></li>
+    <li><a href="#location-voiture">Location</a></li>
     <li><a href="#transfert">Transfert</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#contact" class="nav-cta">Nous Contacter</a></li>
@@ -1567,6 +1679,7 @@
     <a href="#services">Services</a>
     <a href="#destinations">Destinations</a>
     <a href="#pourquoi">Notre Différence</a>
+    <a href="#location-voiture">Location</a>
     <a href="#transfert">Transfert</a>
     <a href="#tarifs">Tarifs</a>
     <a href="#contact" class="nav-cta-mobile">Nous Contacter</a>
@@ -1616,7 +1729,7 @@
 <!-- ─── ABOUT ─── -->
 <section class="about" id="apropos">
   <div class="about-img">
-    <img src="https://picsum.photos/seed/mankafy-baobabs/1200/900" alt="Baobabs Madagascar" loading="lazy" decoding="async" />
+    <img src="pictures/Nella_miroire.png" alt="Baobabs Madagascar" loading="lazy" decoding="async" />
     <div class="about-img-badge">
       10+ Ans
       <span>Au service du voyage</span>
@@ -1670,7 +1783,7 @@
   <div class="services-grid">
     <div class="service-card">
       <div class="service-card-img">
-        <img src="https://picsum.photos/seed/mankafy-voyage-international/1200/800" alt="Voyage international" loading="lazy" decoding="async" />
+        <img src="pictures/chine_monument.jpeg" alt="Voyage international" loading="lazy" decoding="async" />
       </div>
       <div class="service-card-body">
         <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></div>
@@ -1681,7 +1794,7 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="https://picsum.photos/seed/mankafy-circuits-madagascar/1200/800" alt="Madagascar circuits" loading="lazy" decoding="async" />
+        <img src="pictures/animaux_madagascar.jpeg" alt="Madagascar circuits" loading="lazy" decoding="async" />
       </div>
       <div class="service-card-body">
         <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg></div>
@@ -1692,13 +1805,24 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="https://picsum.photos/seed/mankafy-transfert-argent/1200/800" alt="Transfert argent" loading="lazy" decoding="async" />
+        <img src="pictures/transfert_argent.jpg" alt="Transfert argent" loading="lazy" decoding="async" />
       </div>
       <div class="service-card-body">
         <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></div>
         <h3>Transfert d'Argent</h3>
         <p>Envoyez de l'argent depuis Madagascar vers la France, la Chine, et d'autres pays en toute sécurité et rapidité. Service fiable, taux compétitifs.</p>
         <span class="service-tag">International</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://picsum.photos/seed/mankafy-car-rental/800/600" alt="Location de voiture à Madagascar" loading="lazy" decoding="async" />
+      </div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-car"></use></svg></div>
+        <h3>Location de Voiture</h3>
+        <p>Citadines, 4x4 ou minibus — louez votre véhicule à Antananarivo, Nosy Be ou ailleurs. Livraison aéroport, assurance incluse, avec ou sans chauffeur.</p>
+        <span class="service-tag">Madagascar</span>
       </div>
     </div>
   </div>
@@ -1868,10 +1992,10 @@
   <div class="why-grid">
     <div class="why-img-stack">
       <div class="why-img-main">
-        <img src="https://picsum.photos/seed/mankafy-sur-mesure/1200/900" alt="Voyage sur mesure" loading="lazy" decoding="async" />
+        <img src="pictures/bagage_soigne.jpeg" alt="Voyage sur mesure" loading="lazy" decoding="async" />
       </div>
       <div class="why-img-accent">
-        <img src="https://picsum.photos/seed/mankafy-decouverte-locale/900/900" alt="Découverte locale" loading="lazy" decoding="async" />
+        <img src="pictures/Nellah_Cliente.jpeg" alt="Découverte locale" loading="lazy" decoding="async" />
       </div>
       <div class="why-img-quote">
         <div class="big"><svg class="icon" aria-hidden="true"><use href="#i-quote"></use></svg></div>
@@ -1911,6 +2035,72 @@
   </div>
 </section>
 
+<!-- ─── CAR RENTAL ─── -->
+<section class="car-rental" id="location-voiture">
+  <div class="section-tag" style="justify-content:center">Mobilité sur place</div>
+  <h2 class="section-title">Location de voiture<br><em>à Madagascar</em></h2>
+  <p class="car-rental-intro">Explorez l'île en toute liberté. Nous proposons une flotte variée, adaptée aux routes malgaches — de la citadine pour la ville au 4x4 pour les circuits off-road. Réservation simple, livraison à l'aéroport ou à votre hôtel.</p>
+  <div class="car-rental-grid">
+    <article class="car-card">
+      <div class="car-card-img">
+        <img src="https://picsum.photos/seed/mankafy-citadine/600/400" alt="Citadine économique" loading="lazy" decoding="async" />
+      </div>
+      <div class="car-card-body">
+        <h3>Citadine</h3>
+        <p>Idéale pour Antananarivo et les trajets urbains. Économique et facile à manœuvrer.</p>
+        <div class="car-card-price">À partir de 80 000 Ar / jour</div>
+      </div>
+    </article>
+    <article class="car-card">
+      <div class="car-card-img">
+        <img src="https://picsum.photos/seed/mankafy-4x4/600/400" alt="4x4 tout-terrain" loading="lazy" decoding="async" />
+      </div>
+      <div class="car-card-body">
+        <h3>4x4</h3>
+        <p>Le choix des aventuriers pour les routes du sud, de l'ouest et les parcs nationaux.</p>
+        <div class="car-card-price">À partir de 150 000 Ar / jour</div>
+      </div>
+    </article>
+    <article class="car-card">
+      <div class="car-card-img">
+        <img src="https://picsum.photos/seed/mankafy-minibus/600/400" alt="Minibus familial" loading="lazy" decoding="async" />
+      </div>
+      <div class="car-card-body">
+        <h3>Minibus</h3>
+        <p>Parfait pour les groupes et familles. Jusqu'à 9 places, confortable pour les longs trajets.</p>
+        <div class="car-card-price">À partir de 200 000 Ar / jour</div>
+      </div>
+    </article>
+    <article class="car-card">
+      <div class="car-card-img">
+        <img src="https://picsum.photos/seed/mankafy-berline/600/400" alt="Berline confort" loading="lazy" decoding="async" />
+      </div>
+      <div class="car-card-body">
+        <h3>Berline</h3>
+        <p>Confort et élégance pour vos déplacements professionnels ou vos escapades en couple.</p>
+        <div class="car-card-price">À partir de 120 000 Ar / jour</div>
+      </div>
+    </article>
+  </div>
+  <div class="car-rental-features">
+    <span class="car-feature"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Assurance incluse</span>
+    <span class="car-feature"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Livraison aéroport & hôtel</span>
+    <span class="car-feature"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Chauffeur en option</span>
+    <span class="car-feature"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Kilométrage flexible</span>
+  </div>
+  <a href="#contact" class="btn-primary car-rental-cta rental-cta"
+    data-trip-type="Location de voiture"
+    data-destinations="Madagascar"
+    data-default-people="1"
+    data-default-days="7"
+    data-message="Bonjour Mankafy Voyage, je souhaite louer une voiture à Madagascar. Merci de me préciser les tarifs et la disponibilité selon mes dates.">
+    <svg class="icon" aria-hidden="true"><use href="#i-car"></use></svg>
+    <span>Demander un devis location</span>
+  </a>
+</section>
+
+<div class="divider"></div>
+
 <!-- ─── TRANSFER ─── -->
 <section class="transfer" id="transfert">
   <div class="transfer-text">
@@ -1935,7 +2125,7 @@
     </a>
   </div>
   <div class="transfer-img">
-    <img src="https://picsum.photos/seed/mankafy-transfert-international/1200/800" alt="Transfert international" loading="lazy" decoding="async" />
+    <img src="pictures/transfert_argent_2.jpg" alt="Transfert international" loading="lazy" decoding="async" />
     <div class="transfer-img-overlay">
       <div class="transfer-flow">
         <div class="transfer-flow-node highlight"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/mg.svg" alt="" aria-hidden="true" />Madagascar</div>
@@ -2032,6 +2222,10 @@
     <details class="faq-item">
       <summary>Combien de temps à l'avance faut-il réserver ?</summary>
       <p>Idéalement, plusieurs semaines à l'avance pour avoir plus de choix sur les vols et les hébergements. Mais nous pouvons aussi gérer des demandes plus urgentes selon la disponibilité.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Proposez-vous la location de voiture à Madagascar ?</summary>
+      <p>Oui. Nous proposons la location de citadines, 4x4, berlines et minibus à Antananarivo, Nosy Be et dans d'autres villes. Livraison à l'aéroport ou à l'hôtel, assurance incluse, avec ou sans chauffeur.</p>
     </details>
     <details class="faq-item">
       <summary>Proposez-vous aussi le transfert d'argent ?</summary>
@@ -2143,6 +2337,7 @@
         <option>Circuit Madagascar uniquement</option>
         <option>Voyage international depuis Madagascar</option>
         <option>Combo Madagascar + Destination</option>
+        <option>Location de voiture</option>
         <option>Voyage d'affaires</option>
         <option>Autre demande</option>
       </select>
@@ -2187,6 +2382,7 @@
   <ul class="footer-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#location-voiture">Location</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -2286,7 +2482,7 @@
     }, 300);
   }
 
-  document.querySelectorAll('.pricing-cta').forEach(button => {
+  document.querySelectorAll('.pricing-cta, .rental-cta').forEach(button => {
     button.addEventListener('click', () => {
       prefillQuoteForm(button);
     });
@@ -2326,7 +2522,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .dest-card, .testi-card, .why-point, .feature-item').forEach(el => {
+    document.querySelectorAll('.service-card, .car-card, .dest-card, .testi-card, .why-point, .feature-item').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

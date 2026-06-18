@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Facture détaillée de prestation web pour la création du site Mankafy Voyage." />
+<meta name="theme-color" content="#0A1628" />
+<title>Facture de prestation web — Mankafy Voyage</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4efe5;
+    --card: #ffffff;
+    --deep: #0a1628;
+    --deep2: #112240;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --text: #243043;
+    --muted: #68707d;
+    --border: rgba(10, 22, 40, 0.1);
+    --shadow: 0 24px 60px rgba(10, 22, 40, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(circle at top right, rgba(201,168,76,0.12), transparent 20%),
+      radial-gradient(circle at bottom left, rgba(17,34,64,0.08), transparent 24%),
+      var(--bg);
+  }
+
+  a { color: inherit; }
+
+  .page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 32px 18px 42px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .brand strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+
+  .brand span {
+    margin-top: 6px;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 18px;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+  .btn.primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep);
+    box-shadow: 0 10px 24px rgba(201,168,76,0.24);
+  }
+  .btn.secondary {
+    background: rgba(17,34,64,0.08);
+    color: var(--deep);
+  }
+
+  .invoice {
+    background: rgba(255,255,255,0.86);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: var(--shadow);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .invoice-head {
+    background: linear-gradient(135deg, var(--deep), var(--deep2));
+    color: #fff;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 1.35fr 0.95fr;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .invoice-head h1 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .invoice-head p {
+    margin: 8px 0 0;
+    max-width: 620px;
+    color: rgba(245,240,232,0.78);
+    line-height: 1.5;
+    font-size: 0.92rem;
+  }
+
+  .invoice-meta {
+    width: 100%;
+    max-width: 340px;
+    justify-self: end;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 14px 16px;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.84rem;
+  }
+
+  .meta-row:last-child { border-bottom: 0; }
+  .meta-row span { color: rgba(255,255,255,0.66); }
+  .meta-row strong { color: #fff; text-align: right; }
+  .meta-row input {
+    width: 100%;
+    max-width: 170px;
+    text-align: right;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font: inherit;
+    padding: 0;
+    outline: none;
+  }
+
+  .invoice-head .badge {
+    padding: 5px 9px;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+
+  .content {
+    padding: 24px 28px 28px;
+    display: grid;
+    gap: 18px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .panel {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+  }
+
+  .info-grid .panel {
+    padding: 14px;
+  }
+
+  .panel h2 {
+    margin: 0 0 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    color: var(--deep);
+  }
+
+  .info-grid .panel h2 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+  }
+
+  .info-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 10px 12px;
+    border: 1px solid rgba(10,22,40,0.08);
+    border-radius: 12px;
+    background: rgba(17,34,64,0.02);
+  }
+
+  .info-row span {
+    flex: 0 0 auto;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .info-row span::after {
+    content: ':';
+    margin-left: 4px;
+  }
+
+  .info-row strong {
+    flex: 1;
+    color: var(--deep);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    font-weight: 700;
+    word-break: break-word;
+  }
+
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .detail-lines {
+    display: grid;
+    gap: 6px;
+    color: var(--muted);
+    line-height: 1.45;
+    font-size: 0.82rem;
+  }
+
+  .detail-lines div {
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+  }
+
+  .detail-lines strong {
+    display: inline;
+    color: var(--deep);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .detail-lines strong::after {
+    content: ':';
+    margin-left: 4px;
+  }
+
+  .field { display: grid; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  .field input, .field textarea {
+    width: 100%;
+    border: 1px solid rgba(10,22,40,0.12);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text);
+    background: #fff;
+    outline: none;
+  }
+
+  .field input:focus, .field textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: var(--card);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 780px;
+  }
+
+  thead th {
+    background: rgba(17,34,64,0.04);
+    color: var(--deep);
+    text-align: left;
+    padding: 16px;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  tbody td {
+    padding: 16px;
+    border-top: 1px solid rgba(10,22,40,0.08);
+    vertical-align: top;
+  }
+
+  tbody td input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+  }
+
+  .amount { text-align: right; white-space: nowrap; font-weight: 700; }
+
+  .summary {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .totals {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(17,34,64,0.05), rgba(255,255,255,0.98));
+    border: 1px solid var(--border);
+  }
+
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(10,22,40,0.08);
+  }
+
+  .total-row:last-child { border-bottom: 0; }
+
+  .total-row strong {
+    font-size: 1.05rem;
+    color: var(--deep);
+  }
+
+  .total-row.grand {
+    margin-top: 4px;
+    padding-top: 14px;
+    border-top: 2px solid rgba(201,168,76,0.35);
+    border-bottom: 0;
+  }
+
+  .grand strong {
+    color: var(--gold);
+    font-size: 1.32rem;
+  }
+
+  .note-grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .footer-note {
+    padding: 0 32px 32px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 0 32px 32px;
+  }
+
+  .signature .panel { min-height: 150px; }
+
+  .print-only { display: none; }
+
+  .summary-lines {
+    display: grid;
+    gap: 6px;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(201,168,76,0.12);
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 5mm;
+    }
+
+    body {
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page { padding: 0; max-width: none; }
+    .page {
+      zoom: 0.88;
+      transform-origin: top left;
+    }
+    .actions, .btn, .no-print { display: none !important; }
+    .invoice { box-shadow: none; border: 0; border-radius: 0; }
+    .invoice-head { border-radius: 0; }
+    .panel, .table-wrap, .totals { break-inside: avoid; }
+    .print-only { display: block; }
+    .signature, .footer-note, .summary > .panel, .info-grid .panel:last-child { display: none !important; }
+    input, textarea { border: 0 !important; box-shadow: none !important; }
+
+    .invoice-head {
+      padding: 8px 10px;
+      gap: 8px;
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .invoice-head h1 {
+      font-size: 1.55rem;
+    }
+
+    .invoice-head p {
+      margin-top: 4px;
+      line-height: 1.35;
+      font-size: 0.8rem;
+    }
+
+    .badge {
+      font-size: 0.5rem;
+      padding: 3px 7px;
+    }
+
+    .content {
+      padding: 8px 10px 8px;
+      gap: 6px;
+    }
+
+    .panel {
+      padding: 10px 11px;
+      border-radius: 10px;
+    }
+
+    .panel h2 {
+      margin-bottom: 6px;
+      font-size: 1.08rem;
+    }
+
+    .field-grid {
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+    }
+
+    .field input,
+    .field textarea {
+      padding: 7px 9px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    }
+
+    table {
+      min-width: 0;
+      font-size: 0.76rem;
+    }
+
+    thead th {
+      padding: 7px 8px;
+      font-size: 0.62rem;
+    }
+
+    tbody td {
+      padding: 6px 8px;
+    }
+
+    tbody td:nth-child(2) {
+      line-height: 1.28;
+    }
+
+    .summary {
+      grid-template-columns: 1fr 190px;
+      gap: 8px;
+    }
+
+    .totals {
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .totals .total-row:nth-child(2),
+    .totals .total-row:nth-child(3) {
+      display: none;
+    }
+
+    .total-row {
+      padding: 5px 0;
+      gap: 10px;
+    }
+
+    .total-row strong {
+      font-size: 0.92rem;
+    }
+
+    .total-row.grand {
+      padding-top: 7px;
+      margin-top: 1px;
+    }
+
+    .grand strong {
+      font-size: 1.08rem;
+    }
+
+    .summary-lines {
+      margin-top: 4px;
+      gap: 4px;
+      font-size: 0.76rem;
+      line-height: 1.35;
+    }
+
+    .detail-lines {
+      gap: 4px;
+      font-size: 0.76rem;
+      line-height: 1.35;
+    }
+
+    .info-list {
+      gap: 6px;
+    }
+
+    .info-row {
+      padding: 8px 10px;
+      gap: 4px;
+    }
+
+    .info-row span,
+    .detail-lines strong {
+      font-size: 0.56rem;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .invoice-head, .info-grid, .summary, .signature {
+      grid-template-columns: 1fr;
+    }
+    .invoice-meta { justify-self: stretch; max-width: none; }
+    .field-grid { grid-template-columns: 1fr; }
+    .content, .footer-note, .signature, .invoice-head { padding-left: 18px; padding-right: 18px; }
+    .content { padding-top: 18px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <section class="invoice" aria-label="Facture de création de site web">
+      <header class="invoice-head">
+        <div>
+          <div class="badge">Prestation web</div>
+          <h1>Facture détaillée</h1>
+          <div class="summary-lines">
+            <div><strong>Projet :</strong> Création du site vitrine Mankafy Voyage</div>
+            <div><strong>Nature :</strong> Conception, intégration, responsive, SEO et optimisation de conversion</div>
+          </div>
+        </div>
+        <div class="invoice-meta">
+          <div class="meta-row"><span>N° facture</span><strong><input value="MV-WEB-2026-001" /></strong></div>
+          <div class="meta-row"><span>Date</span><strong><input type="date" value="2026-05-29" /></strong></div>
+          <div class="meta-row"><span>Échéance</span><strong><input type="date" value="2026-06-05" /></strong></div>
+          <div class="meta-row"><span>Statut</span><strong><input value="À régler" /></strong></div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="info-grid">
+          <div class="panel">
+            <h2>Prestataire</h2>
+            <div class="info-list">
+              <div class="info-row"><span>Nom / Société</span><strong>ANDRIANIAINA Sahobisoa Rolland</strong></div>
+              <div class="info-row"><span>Adresse</span><strong>Tsiadana, Ambohidempona</strong></div>
+              <div class="info-row"><span>Téléphone</span><strong>034 95 127 77</strong></div>
+              <div class="info-row"><span>Email</span><strong>ansarollmg@gmai.com</strong></div>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>Client</h2>
+            <div class="info-list">
+              <div class="info-row"><span>Nom client</span><strong>Mankafy Voyage</strong></div>
+              <div class="info-row"><span>Téléphone</span><strong>034 12 513 74</strong></div>
+              <div class="info-row"><span>Adresse / Société</span><strong>Madagascar</strong></div>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>Détail de la facture</h2>
+            <div class="detail-lines">
+              <div><strong>Projet</strong>Création du site vitrine Mankafy Voyage</div>
+              <div><strong>Nature</strong>Conception, intégration, responsive, SEO et conversion</div>
+              <div><strong>Livraison</strong>Site en ligne de "Mankafy Voyage"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="Lignes de facturation">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:10%">Qté</th>
+                <th style="width:43%">Description</th>
+                <th style="width:15%">PU</th>
+                <th style="width:12%">TVA</th>
+                <th style="width:20%" class="amount">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input value="1" /></td>
+                <td><input value="Cadrage du projet + intégration HTML/CSS complète de la page vitrine" /></td>
+                <td><input value="1 250 000 Ar" /></td>
+                <td><input value="0%" /></td>
+                <td class="amount"><input value="1 250 000 Ar" /></td>
+              </tr>
+              <tr>
+                <td><input value="1" /></td>
+                <td><input value="Design responsive mobile, tablette et desktop + création du menu mobile" /></td>
+                <td><input value="670 000 Ar" /></td>
+                <td><input value="0%" /></td>
+                <td class="amount"><input value="670 000 Ar" /></td>
+              </tr>
+              <tr>
+                <td><input value="1" /></td>
+                <td><input value="Sections de conversion : tarifs, FAQ, contact et formulaire" /></td>
+                <td><input value="380 000 Ar" /></td>
+                <td><input value="0%" /></td>
+                <td class="amount"><input value="380 000 Ar" /></td>
+              </tr>
+              <tr>
+                <td><input value="1" /></td>
+                <td><input value="Optimisation SEO + Open Graph + favicon + pré-remplissage des formulaires" /></td>
+                <td><input value="430 000 Ar" /></td>
+                <td><input value="0%" /></td>
+                <td class="amount"><input value="430 000 Ar" /></td>
+              </tr>
+              <tr>
+                <td><input value="1" /></td>
+                <td><input value="Tests, corrections, validation finale et mise en forme d'impression" /></td>
+                <td><input value="200 000 Ar" /></td>
+                <td><input value="0%" /></td>
+                <td class="amount"><input value="200 000 Ar" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="summary">
+          <div class="panel">
+            <h2>Conditions et observations</h2>
+            <div class="note-grid">
+              <div class="field">
+                <label>Modalités de paiement</label>
+                <input value="Acompte à la commande, solde à la livraison" />
+              </div>
+              <div class="field">
+                <label>Remarques</label>
+                <textarea>La présente facture peut être utilisée comme document interne ou envoyée au client. Les montants peuvent être ajustés selon le devis final, les ajouts demandés et les délais d'exécution.</textarea>
+              </div>
+            </div>
+          </div>
+          <div class="totals">
+            <div class="total-row"><span>Sous-total</span><strong>2 930 000 Ar</strong></div>
+            <div class="total-row"><span>TVA</span><strong>0 Ar</strong></div>
+            <div class="total-row"><span>Accompte versé</span><strong>0 Ar</strong></div>
+            <div class="total-row grand"><span>Total à régler</span><strong>2 930 000 Ar</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="signature">
+        <div class="panel">
+          <h2>Signature client</h2>
+          <p class="print-only">____________________________________________</p>
+        </div>
+        <div class="panel">
+          <h2>Signature prestataire</h2>
+          <p class="print-only">____________________________________________</p>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Merci pour votre confiance. Pour toute précision, cette facture peut être personnalisée avec le nom du client, les dates réelles, les montants exacts et les conditions finales. Utilisez le bouton d'impression pour générer une version PDF.
+      </div>
+    </section>
+  </div>
+</body>
+</html>
