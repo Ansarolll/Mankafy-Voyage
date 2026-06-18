@@ -396,7 +396,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    color: rgba(255,255,255,0.5);
+    color: rgb(255, 255, 255);
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -404,10 +404,10 @@
     animation: fadeUp 1s 1.2s forwards;
   }
   .hero-scroll-line {
-    width: 1px;
+    width: 3px;
     height: 50px;
-    background: linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
-    animation: scrollPulse 2s infinite;
+    background: linear-gradient(to bottom, rgb(201, 168, 76), transparent);
+    animation: scrollPulse 1s infinite;
   }
   @keyframes scrollPulse {
     0%, 100% { opacity: 0.4; transform: scaleY(1); }
@@ -427,14 +427,14 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.2rem;
     font-weight: 600;
-    color: var(--gold);
+    color: var(--gold-light);
     line-height: 1;
   }
   .stat-label {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
+    color: rgb(255, 255, 255);
     margin-top: 0.3rem;
   }
 
@@ -1176,6 +1176,7 @@
     color: var(--text-light);
     font-size: 0.85rem;
     padding-bottom: 3px;
+    opacity: .3;
   }
 
   /* ─── PRICING ─── */
@@ -1289,6 +1290,7 @@
     color: var(--text-light);
     font-size: 0.85rem;
     line-height: 1.7;
+    opacity: .3;
   }
 
   /* ─── CONTACT ─── */
