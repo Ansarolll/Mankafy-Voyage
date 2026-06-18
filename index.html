@@ -555,6 +555,12 @@
     color: var(--teal);
     font-weight: 600;
   }
+  .brand-highlight {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+  .hero-sub .brand-highlight { color: var(--gold-light); }
+  .service-card-body .brand-highlight { color: var(--teal); }
   .about-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1044,6 +1050,15 @@
 
   /* ─── TESTIMONIALS ─── */
   .testimonials { background: var(--cream); text-align: center; }
+  .testi-intro {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    max-width: 520px;
+    margin: 1rem auto 0;
+    line-height: 1.7;
+    font-weight: 300;
+    font-style: italic;
+  }
   .testi-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1695,7 +1710,7 @@
   <div class="hero-content">
     <div class="hero-badge">Depuis Madagascar, vers le Monde</div>
     <h1>Voyager, c'est vivre.<br><em>Mankafy Voyage</em><br>vous y emmène.</h1>
-    <p class="hero-sub">Une agence de voyage née de la passion, portée par 10 ans d'expérience. Chaque client est traité comme si c'était nous qui voyagions — avec le même soin, la même attention, le même cœur.</p>
+    <p class="hero-sub"><strong class="brand-highlight">Mankafy</strong> — une agence de voyage née de la passion, portée par 10 ans d'expérience. Chaque client est traité comme si c'était nous qui voyagions : le même soin, la même attention, le même cœur.</p>
     <div class="hero-actions">
       <a href="#destinations" class="btn-primary">
         <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
@@ -1739,7 +1754,7 @@
     <div class="section-tag">Notre Histoire</div>
     <h2 class="section-title">Plus qu'une agence,<br><em>un engagement personnel</em></h2>
     <p style="margin-top:1.2rem">Mankafy Voyage est née d'une conviction : <strong>chaque voyageur mérite une expérience unique.</strong> Pas un circuit standard, pas un forfait générique — mais un voyage taillé sur mesure, pensé dans les moindres détails.</p>
-    <p>Depuis Madagascar, nous organisons des voyages dans tout le pays et vers les destinations les plus belles du monde. Nous connaissons les artisans d'Ambositra, les potiers d'Ambatolampy, les secrets des routes qui ne figurent sur aucun guide.</p>
+    <p>Depuis Madagascar, nous organisons des voyages dans tout le pays et vers les destinations les plus belles du monde. Nous connaissons les artisans d'Ambositra, les potiers d'Ambatolampy, le Ranch d'Ampefy, les eaux thermiques d'Andranomafana, les lémuriens d'Ambalavao, les baleines de Nosy Bé, Tuléar et ses plages paradisiaques, Diego Suarez pour la randonnée, Morondava et les Tsingy, les fleuves Tsiribihina à Miandrivazo, Chalon… et les secrets des routes qui ne figurent sur aucun guide.</p>
     <p>Nos 2 bureaux à Madagascar témoignent de la confiance que nos clients nous accordent depuis plus d'une décennie.</p>
     <div class="about-features">
       <div class="feature-item">
@@ -1753,14 +1768,14 @@
         <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-plane"></use></svg></div>
         <div class="feature-text">
           <h4>Voyages combo</h4>
-          <p>Madagascar + vos destinations rêvées</p>
+          <p>Trois ou quatre destinations en un seul voyage — trois en un</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></div>
         <div class="feature-text">
           <h4>Transfert d'argent</h4>
-          <p>Vers la France, Chine et bien plus</p>
+          <p>Vers la France, la Chine et Dubaï</p>
         </div>
       </div>
       <div class="feature-item">
@@ -1788,7 +1803,7 @@
       <div class="service-card-body">
         <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></div>
         <h3>Voyages Internationaux</h3>
-        <p>De Madagascar vers les plus belles destinations du monde. Billets d'avion, hôtels, visas, transferts — tout est géré pour vous.</p>
+        <p>De Madagascar vers le <strong>Monde</strong> : Japon (la propreté exemplaire de sa population), Dubaï (ville extraordinaire et extravagante), Kuala Lumpur (mélange de modernité et nature), Bali (détente et plages)… Billets d'avion, hôtels, visas, excursions, shopping, activités culturelles et gastronomiques — tout est géré pour vous.</p>
         <span class="service-tag">Madagascar → Monde</span>
       </div>
     </div>
@@ -1799,8 +1814,8 @@
       <div class="service-card-body">
         <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg></div>
         <h3>Circuits Madagascar</h3>
-        <p>Découvrez Madagascar comme jamais — loin des itinéraires classiques. Nous vous emmenons dans les villes cachées, rencontrer les artisans et les cultures locales.</p>
-        <span class="service-tag">Circuits exclusifs</span>
+        <p>Avec <strong class="brand-highlight">Mankafy</strong>, découvrez Madagascar autrement — eaux thermiques d'Andranomafana, lémuriens d'Ambalavao, Tsingy de Morondava, fleuves Tsiribihina… Loin des circuits classiques, nous vous emmenons là où les autres n'ont pas été.</p>
+        <span class="service-tag">Circuits Mankafy exclusifs</span>
       </div>
     </div>
     <div class="service-card">
@@ -1810,8 +1825,8 @@
       <div class="service-card-body">
         <div class="service-card-icon"><svg class="icon" aria-hidden="true"><use href="#i-wallet"></use></svg></div>
         <h3>Transfert d'Argent</h3>
-        <p>Envoyez de l'argent depuis Madagascar vers la France, la Chine, et d'autres pays en toute sécurité et rapidité. Service fiable, taux compétitifs.</p>
-        <span class="service-tag">International</span>
+        <p>Envoyez de l'argent depuis Madagascar vers la France, la Chine et Dubaï — et l'inverse. Service fiable, rapide, taux compétitifs.</p>
+        <span class="service-tag">France · Chine · Dubaï</span>
       </div>
     </div>
     <div class="service-card">
@@ -1834,7 +1849,7 @@
     <div>
       <div class="section-tag">Nos Combos & Circuits</div>
       <h2 class="section-title">Destinations <em>Rêvées</em></h2>
-      <p class="dest-intro">Nos voyages combo exclusifs combinent la magie de Madagascar avec les merveilles du monde. Deux expériences inoubliables en un seul voyage.</p>
+      <p class="dest-intro">Nos combos exclusifs : trois ou quatre destinations en un seul voyage — <strong>trois en un</strong>. Madagascar combinée aux merveilles du monde pour une expérience inoubliable.</p>
     </div>
     <a href="#contact" class="btn-primary" style="flex-shrink:0">Planifier mon voyage →</a>
   </div>
@@ -1859,9 +1874,9 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Dubaï</div>
-          <div class="dest-card-sub">UAE — Luxe & modernité</div>
+          <div class="dest-card-sub">Ville extraordinaire & extravagante</div>
         </div>
       </div>
     </div>
@@ -1872,7 +1887,7 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Île Maurice</div>
           <div class="dest-card-sub">Plages de rêve</div>
         </div>
@@ -1885,7 +1900,7 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Seychelles</div>
           <div class="dest-card-sub">Paradis tropical</div>
         </div>
@@ -1898,9 +1913,9 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Japon</div>
-          <div class="dest-card-sub">Tradition & modernité</div>
+          <div class="dest-card-sub">Fahadiovan'ny zareo — tradition & renouveau</div>
         </div>
       </div>
     </div>
@@ -1911,7 +1926,7 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Singapour</div>
           <div class="dest-card-sub">La cité-État futuriste</div>
         </div>
@@ -1924,7 +1939,7 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Chine</div>
           <div class="dest-card-sub">Empire du Milieu</div>
         </div>
@@ -1937,7 +1952,7 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Bangkok</div>
           <div class="dest-card-sub">Thaïlande vibrante</div>
         </div>
@@ -1950,7 +1965,7 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Hong Kong</div>
           <div class="dest-card-sub">Orient & Occident</div>
         </div>
@@ -1963,9 +1978,9 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Malaisie</div>
-          <div class="dest-card-sub">Kuala Lumpur & plus</div>
+          <div class="dest-card-sub">Kuala Lumpur — modernité & nature</div>
         </div>
       </div>
     </div>
@@ -1976,9 +1991,9 @@
         <div class="dest-card-overlay"></div>
         <div class="dest-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></div>
         <div class="dest-card-info">
-          <div class="dest-card-combo">Mada + Combo</div>
+          <div class="dest-card-combo">3 en 1</div>
           <div class="dest-card-name">Indonésie</div>
-          <div class="dest-card-sub">Bali & les îles</div>
+          <div class="dest-card-sub">Bali — détente & plages</div>
         </div>
       </div>
     </div>
@@ -2006,29 +2021,29 @@
       <div class="why-point">
         <div class="why-point-num">01</div>
         <div class="why-point-text">
-          <h3>Implication personnelle totale</h3>
-          <p>Je me mets toujours à la place du client. Comment me sentirais-je si c'était mon voyage ? Cette empathie guide chacune de mes décisions, du choix de l'hôtel jusqu'à la dernière activité.</p>
+          <h3>Une famille, même après le voyage</h3>
+          <p>Avec Mankafy, le voyage ne s'arrête pas au retour. Nos clients deviennent une vraie famille — on reste en contact, on se revoit, on partage encore longtemps après le départ.</p>
         </div>
       </div>
       <div class="why-point">
         <div class="why-point-num">02</div>
         <div class="why-point-text">
-          <h3>Circuits profonds, pas touristiques</h3>
-          <p>Là où les autres agences font les mêmes circuits basiques, nous plongeons dans la vraie Madagascar : les potiers d'Ambatolampy, les artisans d'Ambositra, les routes secrètes.</p>
+          <h3>Traitement VIP</h3>
+          <p>Chaque voyageur est accueilli comme un invité d'honneur. Accueil personnalisé, attention aux moindres détails, service premium du début à la fin — vous voyagez en VIP.</p>
         </div>
       </div>
       <div class="why-point">
         <div class="why-point-num">03</div>
         <div class="why-point-text">
-          <h3>Tarifs ultra-compétitifs</h3>
-          <p>Nos prix s'adaptent à chaque client et à chaque demande. Sans me vanter, nos tarifs comptent parmi les plus abordables du marché, sans jamais sacrifier la qualité.</p>
+          <h3>Billets d'avion au meilleur prix</h3>
+          <p>Nous vendons les billets d'avion depuis Madagascar — et nos tarifs comptent parmi les plus abordables du marché. Moins cher qu'ailleurs, sans compromis sur la qualité.</p>
         </div>
       </div>
       <div class="why-point">
         <div class="why-point-num">04</div>
         <div class="why-point-text">
-          <h3>10 ans d'expérience prouvée</h3>
-          <p>Une décennie dans le métier, 2 bureaux ouverts — ce sont les résultats qui parlent. La confiance de nos clients est notre plus belle récompense.</p>
+          <h3>On voyage comme en famille</h3>
+          <p>Je m'implique personnellement sur chaque dossier — j'amène ma propre famille avec moi dans chaque voyage que j'organise. Vous ressentirez cette chaleur et cette proximité à chaque étape.</p>
         </div>
       </div>
     </div>
@@ -2112,12 +2127,6 @@
       <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/cn.svg" alt="" aria-hidden="true" />Chine</span>
       <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/ae.svg" alt="" aria-hidden="true" />Émirats</span>
       <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/mu.svg" alt="" aria-hidden="true" />Maurice</span>
-      <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/jp.svg" alt="" aria-hidden="true" />Japon</span>
-      <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/sg.svg" alt="" aria-hidden="true" />Singapour</span>
-      <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/my.svg" alt="" aria-hidden="true" />Malaisie</span>
-      <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/th.svg" alt="" aria-hidden="true" />Thaïlande</span>
-      <span class="country-tag"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/id.svg" alt="" aria-hidden="true" />Indonésie</span>
-      <span class="country-tag">+ Et bien plus</span>
     </div>
     <a href="#contact" class="btn-primary" style="margin-top:2rem;display:inline-flex">
       <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg>
@@ -2132,7 +2141,7 @@
         <div class="transfer-flow-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"></use></svg></div>
         <div class="transfer-flow-node">Mankafy Voyage</div>
         <div class="transfer-flow-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"></use></svg></div>
-        <div class="transfer-flow-node"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>Destination</div>
+        <div class="transfer-flow-node"><img class="flag" src="https://hatscripts.github.io/circle-flags/flags/mu.svg" alt="" aria-hidden="true" />Maurice</div>
       </div>
     </div>
   </div>
@@ -2142,6 +2151,7 @@
 <section class="testimonials" id="avis">
   <div class="section-tag" style="justify-content:center">Ce qu'ils disent</div>
   <h2 class="section-title">Avis de nos <em>voyageurs</em></h2>
+  <p class="testi-intro">Des expériences uniques, selon vos désirs.</p>
   <div class="testi-grid">
     <div class="testi-card">
       <div class="testi-quote">"</div>
@@ -2229,7 +2239,7 @@
     </details>
     <details class="faq-item">
       <summary>Proposez-vous aussi le transfert d'argent ?</summary>
-      <p>Oui. Nous proposons un service de transfert d'argent depuis Madagascar vers plusieurs destinations, notamment la France, la Chine, les Émirats, Maurice, le Japon et d'autres pays.</p>
+      <p>Oui. Nous proposons un service de transfert d'argent depuis Madagascar vers l'Île Maurice, ainsi que vers la France, la Chine et Dubaï (et l'inverse).</p>
     </details>
     <details class="faq-item">
       <summary>Quel est le moyen le plus rapide pour vous contacter ?</summary>
@@ -2258,14 +2268,14 @@
       <a href="#contact" class="btn-primary pricing-cta" data-trip-type="Circuit Madagascar uniquement" data-destinations="Madagascar" data-default-people="2" data-default-days="14" data-message="Bonjour Mankafy Voyage, je souhaite un devis pour la formule Escapade locale (850 000 à 1 600 000 Ar par personne), sur une durée de 5 à 7 jours.">Demander ce tarif</a>
     </article>
     <article class="pricing-card featured">
-      <div class="pricing-badge">Le plus demandé</div>
+      <div class="pricing-badge">3 en 1 — Le plus demandé</div>
       <h3>Combo Mada + Dubaï</h3>
       <div class="pricing-price">4 500 000 à 9 000 000 Ar <small>par personne</small></div>
-      <p>Une formule très demandée pour combiner Madagascar avec une grande destination internationale, selon les dates et la saison.</p>
+      <p>Trois ou quatre destinations en un seul voyage — Madagascar combinée à une grande destination internationale, selon vos dates et la saison.</p>
       <ul class="pricing-list">
         <li>Billets et hébergements coordonnés</li>
-        <li>Combinaison de deux expériences en un voyage</li>
-        <li>Accompagnement jusqu’à la validation du dossier</li>
+        <li>Trois expériences en un seul voyage</li>
+        <li>Accompagnement jusqu'à la validation du dossier</li>
       </ul>
       <a href="#contact" class="btn-primary pricing-cta" data-trip-type="Combo Madagascar + Destination" data-destinations="Madagascar + Dubaï" data-default-people="2" data-default-days="21" data-message="Bonjour Mankafy Voyage, je souhaite un devis pour le combo Madagascar + Dubaï (4 500 000 à 9 000 000 Ar par personne). Merci de me proposer les meilleures options selon mes dates.">Obtenir un devis combo</a>
     </article>
@@ -2312,8 +2322,8 @@
     <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08)">
       <div style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.8rem">Nos Bureaux</div>
       <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.9;display:flex;flex-direction:column;gap:0.35rem">
-        <div style="display:flex;align-items:flex-start;gap:0.6rem"><svg class="icon" aria-hidden="true" style="width:16px;height:16px;margin-top:2px"><use href="#i-location"></use></svg><span>Bureau 1 — Madagascar</span></div>
-        <div style="display:flex;align-items:flex-start;gap:0.6rem"><svg class="icon" aria-hidden="true" style="width:16px;height:16px;margin-top:2px"><use href="#i-location"></use></svg><span>Bureau 2 — Madagascar</span></div>
+        <div style="display:flex;align-items:flex-start;gap:0.6rem"><svg class="icon" aria-hidden="true" style="width:16px;height:16px;margin-top:2px"><use href="#i-location"></use></svg><span>Bureau 1 — Antsirabe, Mandaniresaka</span></div>
+        <div style="display:flex;align-items:flex-start;gap:0.6rem"><svg class="icon" aria-hidden="true" style="width:16px;height:16px;margin-top:2px"><use href="#i-location"></use></svg><span>Bureau 2 — Antananarivo, Behoririka, Immeuble Raitra</span></div>
         <div style="display:flex;align-items:flex-start;gap:0.6rem"><svg class="icon" aria-hidden="true" style="width:16px;height:16px;margin-top:2px"><use href="#i-clock"></use></svg><span>Lun – Sam : 8h00 – 18h00</span></div>
       </div>
     </div>
